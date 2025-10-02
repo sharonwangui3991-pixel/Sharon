@@ -2,22 +2,22 @@
 /*
 Name:sharon wangui njoki
 Reg:CT100/G/26218/25
-Description:program for a loan
+Description:program for an exam eigibility
 */
 #include <stdio.h>
-
 int main() {
-    double radius;
-    double height;
-    double pi=3.14;
-    printf("enter radius");
-    scanf("%lf",&radius);
+    float attendance,marks;
+    printf("Enter attendance percentage:");
+    scanf("%f",&attendance);
     
-    printf("enter height");
-    scanf("%lf",&height);
-    double volume=pi*radius*radius*height;
-    double surfacearea=2*pi*radius*radius+2*pi*radius*height;
-    printf("%lf\n",volume);
-    printf("%lf",surfacearea);
+    printf("Enter average marks:");
+    scanf("%f",&marks);
+    
+    if(attendance>=75 && marks>=40)
+    {
+        printf("Eligible\n");
+    }else{
+        printf("Not eligible\n");
+    }
     return 0;
 }
