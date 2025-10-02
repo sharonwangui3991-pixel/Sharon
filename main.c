@@ -2,22 +2,28 @@
 /*
 Name:sharon wangui njoki
 Reg:CT100/G/26218/25
-Description:program for an exam eigibility
+Description:program for water bill
 */
 #include <stdio.h>
+
 int main() {
-    float attendance,marks;
-    printf("Enter attendance percentage:");
-    scanf("%f",&attendance);
+    int units;
+    float bills;
     
-    printf("Enter average marks:");
-    scanf("%f",&marks);
-    
-    if(attendance>=75 && marks>=40)
+    printf("Enter water units consumed:");
+    scanf("%d",&units);
+    if(units<=30)
     {
-        printf("Eligible\n");
-    }else{
-        printf("Not eligible\n");
+        bills=units*20;
+    } 
+    else if(units>30&&units<=60)
+    {
+        bills=30*25+((units=30)*25);
+    } 
+    else(units>60);
+    {
+        bills=30*20+((units=30)*25)+((units-60)*30);
     }
+    printf("Total water bill:%.2f ksh\n",bills);
     return 0;
 }
